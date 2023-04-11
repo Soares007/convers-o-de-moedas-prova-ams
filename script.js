@@ -1,11 +1,27 @@
+const valorReal = document.getElementById("valor_real");
+const cambioDolar = document.getElementById("cambio_dolar");
+const cambioEuro = document.getElementById("cambio_euro");
+const cambioPalm = document.getElementById("cambio_palm");
+const buttonConvert = document.getElementById("convert_btn");
+const valorDolar = document.getElementById("valor_dolar");
+const valorEuro = document.getElementById("valor_euro");
+const valorPalm = document.getElementById("valor_palm");
+
 function converter() {
-    var real, dolar, euro, palm, valorDolar, valorEuro, valorPalm;
-    real = parseFloat(document.getElementById("valorReal").value);
-    dolar = parseFloat(document.getElementById("cambioDolar").value);
-    euro = parseFloat(document.getElementById("cambioEuro").value);
-    palm = parseFloat(document.getElementById("cambioPalm").value);
+    const real = parseFloat(valorReal.value);
+    const cotacaoDolar = parseFloat(cambioDolar.value);
 
     //Conversão Dólar
-    valorDolar = real / dolar;
-   document.getElementById("valorDolar").value = valorDolar;
+    const dolar = real / cotacaoDolar;
+
+    //Exibir o Valor do dólar
+    
+    //Conversão Euro
+    euro = real / cotacaoEuro;
+
+    //Conversão Palms
+    palm = real / cotacaoPalm;
+
 }
+
+buttonConvert.addEventListener("click", converter);
