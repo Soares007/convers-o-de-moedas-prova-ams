@@ -11,40 +11,100 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="container">
-        <div class="header">
-            Conversor de Moedas
+<body class="bg-dark bg-gradient">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Conversor de Moedas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Projetos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Conversor de Moedas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">GitHub</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Calculadoras
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item"
+                                        href="https://soares007.github.io/calculadora-simples/">Calculadora Simples</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://soares007.github.io/calculadora-imc-fatec/">Calculadora de IMC</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://soares007.github.io/conversor-medidas/">Conversor de Unidades de
+                                        Tempo</a></li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://soares007.github.io/palindrome-number-checker/">Palindrome Number
+                                        Checker</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="form-groups">
-            <form>
-                <label for="info">Insira os valores e cambios</label>
-                <div class="mb-3">
-                    <input type="number" id="valor_real" placeholder="Insira o valor em reais">
-                </div>
-                <div class="mb-3">
-                    <input type="number" id="cambio_dolar" placeholder="Insira o valor do câmbio para Dólares">
-                </div>
-                <div class="mb-3">
-                    <input type="number" id="cambio_euro" placeholder="Insira o valor do câmbio para Euros">
-                </div>
-                <div class="mb-3">
-                    <input type="number" id="cambio_libra" placeholder="Insira o valor do câmbio para Libras">
-                </div>
-                <input id="converter_btn" type="button" value="Converter"></input>
-                <div class="mb-3">
-                    <label for="valorDolar">Dólar:</label>
-                    <div class="alert alert-success" style="display: none" role="alert" id="valor_dolar"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="valorEuro">Euro:</label>
-                    <div class="alert alert-success" style="display: none" role="alert" id="valor_euro"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="valorLibra">Libra</label>
-                    <div class="alert alert-success" style="display: none" role="alert" id="valor_libra"></div>
-                </div>
-            </form>
+    </nav>
+
+    <div class="container">
+
+        <div class="card col-md-2 position-absolute top-50 start-50 translate-middle text-center text-dark p-3">
+            <h5 class="card-title">
+                Conversor de Moedas
+            </h5>
+            <div class="card-body">
+                <form>
+                    <h6 class="mb-3">Insira os valores e cambios</h6>
+                    <div class="mb-3">
+                        <input class="text-center input-group" type="number" id="valor_real" placeholder="Insira o valor em reais">
+                    </div>
+                    <div class="mb-3">
+                        <input class="text-center input-group" type="number" id="cambio_dolar" placeholder="Cotação Dólar">
+                    </div>
+                    <div class="mb-3">
+                        <input class="text-center input-group" type="number" id="cambio_euro" placeholder="Cotação Euro">
+                    </div>
+                    <div class="mb-3">
+                        <input class="text-center input-group" type="number" id="cambio_libra" placeholder="Cotação Libra">
+                    </div>
+                    <input class="btn btn-primary" id="converter_btn" type="button" value="Converter"></input>
+                    <div class="mb-3 mt-3">
+                        <input class="btn btn-danger" id="converter_btn" type="reset" value="Limpar" id="btn_limpar"
+                            onclick="limpar()"></input>
+                    </div>
+                    <div class="mb-3 mt-2">
+                        <strong for="valorDolar">Dólar:</strong>
+                        <div class="alert alert-success" style="display: none" role="alert" id="valor_dolar"></div>
+                    </div>
+                    <div class="mb-3">
+                        <strong for="valorEuro">Euro:</strong>
+                        <div class="alert alert-success" style="display: none" role="alert" id="valor_euro"></div>
+                    </div>
+                    <div class="mb-3">
+                        <strong for="valorLibra">Libra:</strong>
+                        <div class="alert alert-success" style="display: none" role="alert" id="valor_libra"></div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="script.js"></script>

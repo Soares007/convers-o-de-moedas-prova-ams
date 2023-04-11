@@ -7,6 +7,15 @@ let valorDolar = document.getElementById("valor_dolar");
 let valorEuro = document.getElementById("valor_euro");
 let valorLibra = document.getElementById("valor_libra");
 
+function limpar () {
+    valorDolar.style.display="none";
+    valorDolar.innerHTML = ``;   
+    valorEuro.style.display="none"; 
+    valorEuro.innerHTML = ``; 
+    valorLibra.style.display="none"; 
+    valorLibra.innerHTML = ``;  
+}
+
 function converter() {
     const real = parseFloat(valorReal.value);
     const cotacao_dolar = parseFloat(cambioDolar.value);
