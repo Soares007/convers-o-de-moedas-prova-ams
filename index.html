@@ -19,28 +19,35 @@
         <div class="form-groups">
             <form>
                 <label for="info">Insira os valores e cambios</label>
-                <br>
-             <input type="number" id="valor_real" placeholder="Insira o valor em reais">
-             <br>
-             <input type="number" id="cambio_dolar" placeholder="Insira o valor do câmbio para Dólares">
-             <br>
-             <input type="number" id="cambio_euro" placeholder="Insira o valor do câmbio para Euros">
-             <br>
-             <input type="number" id="cambio_palm" placeholder="Insira o valor do câmbio para Palms">
-             <input id="converter_btn" type="button" value="Converter"></input>
-             <br>
-             <label for="valorDolar">Dólar:</label>
-             <input type="text" id="valor_dolar" disabled>
-             <br>
-             <label for="valorEuro">Euro:</label>
-             <input type="number" id="valor_euro" disabled>
-             <br>
-             <label for="valorPalm">Palm</label>
-             <input type="number" id="valor_palm" disabled>
+                <div class="mb-3">
+                    <input type="number" id="valor_real" placeholder="Insira o valor em reais">
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="cambio_dolar" placeholder="Insira o valor do câmbio para Dólares">
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="cambio_euro" placeholder="Insira o valor do câmbio para Euros">
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="cambio_palm" placeholder="Insira o valor do câmbio para Palms">
+                </div>
+                <input id="converter_btn" type="button" value="Converter"></input>
+                <div class="mb-3">
+                    <label for="valorDolar">Dólar:</label>
+                    <div class="alert alert-success" style="display: none" role="alert" id="valor_dolar"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="valorEuro">Euro:</label>
+                    <input type="number" id="valor_euro" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="valorPalm">Palm</label>
+                    <input type="number" id="valor_palm" disabled>
+                </div>
             </form>
         </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>  
+    <script type="text/javascript" src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
