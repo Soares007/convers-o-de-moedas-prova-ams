@@ -1,24 +1,30 @@
 const valorReal = document.getElementById("valor_real");
 const cambioDolar = document.getElementById("cambio_dolar");
 const cambioEuro = document.getElementById("cambio_euro");
-const cambioPalm = document.getElementById("cambio_palm");
+const cambioLibra = document.getElementById("cambio_libra");
 const buttonConvert = document.getElementById("converter_btn");
 let valorDolar = document.getElementById("valor_dolar");
-const valorEuro = document.getElementById("valor_euro");
-const valorPalm = document.getElementById("valor_palm");
+let valorEuro = document.getElementById("valor_euro");
+let valorLibra = document.getElementById("valor_libra");
 
 function converter() {
     const real = parseFloat(valorReal.value);
     const cotacao_dolar = parseFloat(cambioDolar.value);
     const cotacao_euro = parseFloat(cambioEuro.value);
+    const cotacao_libra = parseFloat(cambioLibra.value);
 
-    //Conversão Dólar
-    const dolar = real / cotacao_dolar;
+    //Conversões
+    var dolar = real * cotacao_dolar;
+    var euro = real * cotacao_euro;
+    var libra = real * cotacao_libra;
 
-    const euro = real / cotacao_euro;
-
-    //Exibir o Valor do dólar
-    valorDolar.innerHTML = `<p> R$${real} é equivalente à $${dolar}</p>`;    
+    //Exibir valores
+    valorDolar.style.display="block";
+    valorDolar.innerHTML = `<p> R$${real} é equivalente à US$${dolar}</p>`;   
+    valorEuro.style.display="block"; 
+    valorEuro.innerHTML = `<p> R$${real} é equivalente à €${euro}</p>`; 
+    valorLibra.style.display="block"; 
+    valorLibra.innerHTML = `<p> R$${real} é equivalente à €${libra}</p>`;  
 
 }
 
