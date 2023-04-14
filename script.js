@@ -23,9 +23,9 @@ function converter() {
     const cotacao_libra = parseFloat(cambioLibra.value);
 
     //Conversões
-    var dolar = real * cotacao_dolar;
-    var euro = real * cotacao_euro;
-    var libra = real * cotacao_libra;
+    var dolar = real / cotacao_dolar;
+    var euro = real / cotacao_euro;
+    var libra = real / cotacao_libra;
 
     //Exibir valores
     valorDolar.style.display="block";
